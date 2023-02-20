@@ -1249,13 +1249,15 @@ class Parsedown
                 'attributes' => array(
                     'src' => $Link['element']['attributes']['href'],
                     'alt' => $Link['element']['text'],
+                    'href' => $Link['element']['attributes']['href'],
+                    'data-fancybox' => 'gallery',
                 ),
             ),
         );
 
         $Inline['element']['attributes'] += $Link['element']['attributes'];
 
-        unset($Inline['element']['attributes']['href']);
+        # unset($Inline['element']['attributes']['href']);
 
         return $Inline;
     }
